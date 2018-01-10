@@ -1,0 +1,26 @@
+<html>
+hi from child
+
+<iframe src="child.html" id = "child"></iframe>
+
+<h1 id="test2"> To be changed </h1>
+<form name = "form" id = "req">
+	
+<input type="text" name= "msg" value ="Your message"/>
+<input type="button" value= "send" onclick="sendData()"/>
+
+
+</form>
+
+<script type="text/javascript">
+	
+parent = window.parent;
+
+function sendData(){
+
+parent.document.getElementById('test1').innerHTML = document.getElementById('req').elements.msg.value;
+
+}
+
+</script>
+</html>

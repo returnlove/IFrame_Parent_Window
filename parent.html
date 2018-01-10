@@ -1,0 +1,25 @@
+<html>
+hi from parent
+<iframe src="child.html" id = "child"></iframe>
+
+<h1 id="test1"> To be changed </h1>
+<form name = "form" id = "parentForm">
+	
+<input type="text" name= "msg" value ="Your message"/>
+<input type="button" value= "send" onclick="send()"/>
+
+
+</form>
+
+<script type="text/javascript">
+	
+	childwindow = document.getElementById('child').contentWindow;
+
+function send(){
+
+childwindow.document.getElementById('test2').innerHTML = document.getElementById('parentForm').elements.msg.value;
+
+}
+
+</script>
+</html>
